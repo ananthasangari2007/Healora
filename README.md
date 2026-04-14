@@ -96,3 +96,32 @@ CONTACT_TO_EMAIL=yourgmail@gmail.com
 - `GET /api/reminders`
 - `POST /api/checkin`
 - `POST /api/contact`
+
+## Deploy on Vercel
+
+This project can be deployed to Vercel as an Express app with a `public/` folder for static files.
+
+### Before deploying
+
+- Push the project to GitHub
+- Keep `.env` out of GitHub
+- Add these Environment Variables in Vercel Project Settings:
+  - `SMTP_HOST`
+  - `SMTP_PORT`
+  - `SMTP_SECURE`
+  - `SMTP_USER`
+  - `SMTP_PASS`
+  - `CONTACT_FROM_EMAIL`
+  - `CONTACT_TO_EMAIL`
+
+### Deploy steps
+
+1. Go to `https://vercel.com/new`
+2. Import your GitHub repo
+3. Keep the default project settings
+4. Add the environment variables listed above
+5. Click `Deploy`
+
+### Important note for Vercel
+
+Vercel serves static files from `public/` and runs the Express app as a serverless function. Local file storage is not persistent there, so contact messages should not rely on `data/messages.json` for permanent storage. Email sending will still work if SMTP is configured.

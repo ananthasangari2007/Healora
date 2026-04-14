@@ -122,10 +122,14 @@ app.post("/api/contact", async (req, res) => {
       `
     });
 
-    const raw = await fs.readFile(messagesPath, "utf8");
-    const items = JSON.parse(raw);
-    items.push(entry);
-    await fs.writeFile(messagesPath, JSON.stringify(items, null, 2));
+    try {
+      const raw = await fs.readFile(messagesPath, "utf8");
+      const items = JSON.parse(raw);
+      items.push(entry);
+      await fs.writeFile(messagesPath, JSON.stringify(items, null, 2));
+    } catch (storageError) {
+      console.warn("Local message storage skipped:", storageError.message);
+    }
   } catch (error) {
     console.error("Contact send failed:", error);
     const smtpHint = error && error.code === "EAUTH";
