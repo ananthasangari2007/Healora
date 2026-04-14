@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1776190160797,
+    "name": "Test",
+    "email": "a@b.com",
+    "message": "Hello",
+    "receivedAt": "2026-04-14T18:09:20.797Z"
+  },
+  {
+    "id": 1776190286443,
+    "name": "Anantha sangari",
+    "email": "ananthasangarip@gmail.com",
+    "message": "anantha sangari p",
+    "receivedAt": "2026-04-14T18:11:26.443Z"
+  },
+  {
+    "id": 1776190655345,
+    "name": "Anantha sangari",
+    "email": "ananthasangari2007@gmail.com",
+    "message": "excellent work",
+    "receivedAt": "2026-04-14T18:17:35.345Z"
+  }
+]

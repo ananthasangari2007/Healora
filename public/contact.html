@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healora | Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="contact">
+  <div class="site-shell">
+    <header class="site-header">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <a class="brand" href="/">
+        <span class="brand-mark">H</span>
+        <span><strong>Healora</strong><small>Personal Health Assistant</small></span>
+      </a>
+      <nav class="site-nav" data-nav>
+        <a href="/" data-nav-link="home"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="/features.html" data-nav-link="features"><i class="fa-solid fa-sparkles"></i> Features</a>
+        <a href="/dashboard.html" data-nav-link="dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+        <a href="/assistant.html" data-nav-link="assistant"><i class="fa-solid fa-stethoscope"></i> Assistant</a>
+        <a href="/plans.html" data-nav-link="plans"><i class="fa-solid fa-layer-group"></i> Programs</a>
+        <a href="/contact.html" data-nav-link="contact"><i class="fa-regular fa-envelope"></i> Contact</a>
+      </nav>
+      <div class="nav-controls">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+          <span data-theme-label>Dark mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="page-intro">
+        <p class="eyebrow"><i class="fa-solid fa-headset"></i> Reach the team</p>
+        <h1>Contact Healora</h1>
+        <p>This form posts to the backend and stores messages locally so the app has a working flow for demos.</p>
+      </section>
+
+      <section class="split-layout">
+        <form class="glass-card form-card" id="contactForm">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" placeholder="Tell us what you need" required></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Send Message</button>
+        </form>
+
+        <article class="glass-card result-card" id="contactResult">
+          <p class="eyebrow">Support flow</p>
+          <h2>Fast, calm, and professional.</h2>
+          <p>Send a test message to confirm the backend is working and storing form submissions.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/contact.js"></script>
+</body>
+</html>

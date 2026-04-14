@@ -1,0 +1,24 @@
+{
+  "name": "healora",
+  "version": "1.0.0",
+  "description": "Healora is a clean multi-page intelligent personal health assistant website with a simple Express backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "smtp:verify": "node scripts/verify-smtp.js"
+  },
+  "keywords": [
+    "health",
+    "assistant",
+    "express",
+    "wellness"
+  ],
+  "author": "Anantha Sangari",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "nodemailer": "^6.10.1",
+    "express": "^4.21.2"
+  }
+}

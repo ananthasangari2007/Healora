@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healora | Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="dashboard">
+  <div class="site-shell">
+    <header class="site-header">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <a class="brand" href="/">
+        <span class="brand-mark">H</span>
+        <span><strong>Healora</strong><small>Personal Health Assistant</small></span>
+      </a>
+      <nav class="site-nav" data-nav>
+        <a href="/" data-nav-link="home"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="/features.html" data-nav-link="features"><i class="fa-solid fa-sparkles"></i> Features</a>
+        <a href="/dashboard.html" data-nav-link="dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+        <a href="/assistant.html" data-nav-link="assistant"><i class="fa-solid fa-stethoscope"></i> Assistant</a>
+        <a href="/plans.html" data-nav-link="plans"><i class="fa-solid fa-layer-group"></i> Programs</a>
+        <a href="/contact.html" data-nav-link="contact"><i class="fa-regular fa-envelope"></i> Contact</a>
+      </nav>
+      <div class="nav-controls">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+          <span data-theme-label>Dark mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="page-intro">
+        <p class="eyebrow"><i class="fa-solid fa-signal"></i> Live overview</p>
+        <h1>Your daily health dashboard</h1>
+        <p>These cards load from the backend so the app feels like a real product, not a static mockup.</p>
+      </section>
+
+      <section class="stats-grid" id="statsGrid"></section>
+
+      <section class="split-layout">
+        <article class="glass-card">
+          <div class="section-heading compact">
+            <p class="eyebrow"><i class="fa-regular fa-clock"></i> Today's plan</p>
+            <h2>Smart reminders</h2>
+          </div>
+          <div id="reminderList" class="stack-list"></div>
+        </article>
+
+        <article class="glass-card">
+          <div class="section-heading compact">
+            <p class="eyebrow"><i class="fa-solid fa-heart-pulse"></i> Health rhythm</p>
+            <h2>Care summary</h2>
+          </div>
+          <div id="summaryPanel" class="stack-list"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
+</body>
+</html>
