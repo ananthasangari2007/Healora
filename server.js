@@ -93,11 +93,17 @@ app.post("/api/contact", async (req, res) => {
   try {
     const toAddress = process.env.CONTACT_TO_EMAIL;
     const fromAddress = process.env.CONTACT_FROM_EMAIL || process.env.SMTP_USER;
+    const missingConfig = [
+      ["SMTP_HOST", process.env.SMTP_HOST],
+      ["SMTP_USER", process.env.SMTP_USER],
+      ["SMTP_PASS", process.env.SMTP_PASS],
+      ["CONTACT_TO_EMAIL", toAddress]
+    ].filter(([, value]) => !value).map(([key]) => key);
 
-    if (!toAddress || !process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    if (missingConfig.length > 0) {
       return res.status(500).json({
         status: "Email not configured",
-        message: "Set SMTP and contact email values in your environment before sending messages."
+        message: `Email is not configured on this deployment yet. Add ${missingConfig.join(", ")} in your environment settings${process.env.VERCEL ? " on Vercel" : ""}, then redeploy.`
       });
     }
 
