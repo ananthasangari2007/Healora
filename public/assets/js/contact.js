@@ -16,13 +16,16 @@ contactForm?.addEventListener("submit", async (event) => {
     });
 
     const data = await response.json();
+    const statusClass = response.ok ? "status-success" : "status-error";
 
     contactResult.innerHTML = `
       <p class="eyebrow">Support flow</p>
-      <h2 class="status-success">${data.status}</h2>
+      <h2 class="${statusClass}">${data.status}</h2>
       <p>${data.message}</p>
     `;
-    contactForm.reset();
+    if (response.ok) {
+      contactForm.reset();
+    }
   } catch (error) {
     contactResult.innerHTML = `
       <p class="eyebrow">Support flow</p>
