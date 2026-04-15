@@ -1,4 +1,6 @@
-# Healora
+# Healora Smart Intelligent Personal Health Assistant
+
+GitHub Repository: https://github.com/ananthasangari2007/Healora
 
 Healora is a clean multi-page intelligent personal health assistant website built with HTML, CSS, JavaScript, and a simple Express backend.
 

@@ -1,7 +1,7 @@
 {
   "name": "healora",
   "version": "1.0.0",
-  "description": "Healora is a clean multi-page intelligent personal health assistant website with a simple Express backend.",
+  "description": "Healora Smart Intelligent Personal Health Assistant is a clean multi-page wellness website with a simple Express backend.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -16,6 +16,11 @@
   ],
   "author": "Anantha Sangari",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ananthasangari2007/Healora.git"
+  },
+  "homepage": "https://github.com/ananthasangari2007/Healora",
   "dependencies": {
     "dotenv": "^16.6.1",
     "nodemailer": "^6.10.1",
